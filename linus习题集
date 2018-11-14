@@ -14,14 +14,14 @@ drwxr-xr-x  9 rimi  staff   306B 11 14 17:24 ..
 
 二，列出/home 目录中所有以”s”开头的目录。
 
-rimideiMac-83:home rimi$ ls -l | grep ^d 
+rimideiMac-83:home rimi$ ls -l | grep ^d                           匹配所有文件夹
 drwxr-xr-x  2 rimi  staff  68 11 14 17:28 d2文件夹
 drwxr-xr-x  2 rimi  staff  68 11 14 17:12 d文件夹
 drwxr-xr-x  2 rimi  staff  68 11 14 17:30 s2文件夹
 drwxr-xr-x  2 rimi  staff  68 11 14 17:19 s文件夹
 drwxr-xr-x  2 rimi  staff  68 11 14 17:12 yqqgsa
 
-rimideiMac-83:home rimi$ ls -l | grep ^d d*
+rimideiMac-83:home rimi$ ls -l | grep ^d d*                       匹配所有d开头的文件夹
 grep: d2文件夹: Is a directory
 grep: d文件夹: Is a directory
 
@@ -32,12 +32,12 @@ grep: d文件夹: Is a directory
 
 
 三。删除后缀名为.log 的所有，删除前逐一询问
-rimideiMac-83:home rimi$ ls
+rimideiMac-83:home rimi$ ls                             查看所有问价
 d2文件夹	s2文件夹	shanchu3.log	s文件夹
 d文件		shanchu1.log	shanchue.log	wqeg
 d文件夹		shanchu2.log	s文件		yqqgsa
 
-rimideiMac-83:home rimi$ rm -i *.log
+rimideiMac-83:home rimi$ rm -i *.log                    删除所有。log文件
 rm: shanchu1.log: is a directory
 remove shanchu2.log? ^C
 rimideiMac-83:home rimi$ rm -ir *.log
@@ -66,5 +66,15 @@ d文件		s2文件夹	s文件夹		yqqgsa
  
  
 5. 找你的用户目录下面的所有py文件,ls -l 查看他们的属性,然后把这些结果输入到一个文件之中
+
+rimideiMac-83:home rimi$ ls -l *.py                               //查看所有py文件
+-rw-r--r--  1 rimi  staff  0 11 14 17:57 ll2.py
+-rw-r--r--  1 rimi  staff  0 11 14 17:57 lll.py  
+
+rimideiMac-83:home rimi$ ls -l *.py > d2文件                     //IO重定向
+
+rimideiMac-83:home rimi$ vim d2文件                             //查看d2文件中的信息
+-rw-r--r--  1 rimi  staff  0 11 14 17:57 ll2.py
+-rw-r--r--  1 rimi  staff  0 11 14 17:57 lll.py                //d2文件中的信息
 
  
