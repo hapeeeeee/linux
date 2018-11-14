@@ -102,6 +102,21 @@ rimideiMac-83:home rimi$ vim d2文件                             //查看d2文�
 
 Mount is denied because the NTFS volume is already exclusively opened.
 The volume may be already mounted, or another software may use it which could be identified for example by the help of the 'fuser' command.
+这显示Mount在被使用，找到该进程kill掉就行了
+
+
+
+9.ssh 服务端口是多少,ssh免密登录方式的原理是什么
+
+ssh默认服务端口号是22 ，
+原理，本地服务器生成公密钥，将他发送到要连接的计算机上，服务器存储秘钥。在下次登录时，服务器查询存储，发现已有公钥，让本地确认，确认后直接免密登录
+
+
+
+10.权限755代表什么权限,如果我想把所有的w权限去除应该使用什么命令
+
+755，代表拥有者可读可写可执行，同组或者其他人只能读或者执行
+去除所有w权限 chmod a-w
 
 
 
