@@ -78,3 +78,31 @@ rimideiMac-83:home rimi$ vim d2文件                             //查看d2文�
 -rw-r--r--  1 rimi  staff  0 11 14 17:57 lll.py                //d2文件中的信息
 
  
+ 
+ 
+ 
+ 6.使用ls查看根目录 并且每行显示3个信息
+ 
+ 
+ 
+ 
+ 
+ 
+ 7.查看所有进程信息,只查看前3行
+ 
+ rimideiMac-83:/ rimi$ ps |head  -3
+  PID TTY           TIME CMD
+ 9120 ttys000    0:00.01 -bash
+ 9126 ttys001    0:00.06 -bash
+ 
+ 
+ 
+ 
+ 8.分析以下问题,并给出解决方案
+
+Mount is denied because the NTFS volume is already exclusively opened.
+The volume may be already mounted, or another software may use it which could be identified for example by the help of the 'fuser' command.
+
+
+
+
