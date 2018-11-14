@@ -1,1 +1,70 @@
+一。以容易理解的格式列出/home 目录中所有以”d”开头的文件目录的大小
+rimideiMac-83:home rimi$ ls -hla d*
+-rw-r--r--  1 rimi  staff     0B 11 14 17:13 d文件
 
+d文件夹:
+total 0
+drwxr-xr-x  2 rimi  staff    68B 11 14 17:12 .
+drwxr-xr-x  9 rimi  staff   306B 11 14 17:24 ..
+
+
+
+
+
+
+二，列出/home 目录中所有以”s”开头的目录。
+
+rimideiMac-83:home rimi$ ls -l | grep ^d 
+drwxr-xr-x  2 rimi  staff  68 11 14 17:28 d2文件夹
+drwxr-xr-x  2 rimi  staff  68 11 14 17:12 d文件夹
+drwxr-xr-x  2 rimi  staff  68 11 14 17:30 s2文件夹
+drwxr-xr-x  2 rimi  staff  68 11 14 17:19 s文件夹
+drwxr-xr-x  2 rimi  staff  68 11 14 17:12 yqqgsa
+
+rimideiMac-83:home rimi$ ls -l | grep ^d d*
+grep: d2文件夹: Is a directory
+grep: d文件夹: Is a directory
+
+
+
+
+
+
+
+三。删除后缀名为.log 的所有，删除前逐一询问
+rimideiMac-83:home rimi$ ls
+d2文件夹	s2文件夹	shanchu3.log	s文件夹
+d文件		shanchu1.log	shanchue.log	wqeg
+d文件夹		shanchu2.log	s文件		yqqgsa
+
+rimideiMac-83:home rimi$ rm -i *.log
+rm: shanchu1.log: is a directory
+remove shanchu2.log? ^C
+rimideiMac-83:home rimi$ rm -ir *.log
+examine files in directory shanchu1.log? y
+remove shanchu1.log? y
+remove shanchu2.log? y
+remove shanchu3.log? y
+examine files in directory shanchue.log? y
+remove shanchue.log? y
+
+rimideiMac-83:home rimi$ ls
+d2文件夹	d文件夹		s文件		wqeg
+d文件		s2文件夹	s文件夹		yqqgsa
+
+
+
+
+4.cp 命令 —n 和 -u的区别
+
+-u
+ -u 或 --update      使用这项参数之后，只会在源文件的修改时间(Modification Time)较目的文件更新时，或是名称相互对应的目的文件并不存在，才复制文件
+-n
+ 当复制的地点中已经有这个文件时，不执行操作
+ 
+ 
+ 
+ 
+5. 找你的用户目录下面的所有py文件,ls -l 查看他们的属性,然后把这些结果输入到一个文件之中
+
+ 
