@@ -14,16 +14,19 @@ drwxr-xr-x  9 rimi  staff   306B 11 14 17:24 ..
 
 二，列出/home 目录中所有以”s”开头的目录。
 
-rimideiMac-83:home rimi$ ls -l | grep ^d                           匹配所有文件夹
-drwxr-xr-x  2 rimi  staff  68 11 14 17:28 d2文件夹
-drwxr-xr-x  2 rimi  staff  68 11 14 17:12 d文件夹
-drwxr-xr-x  2 rimi  staff  68 11 14 17:30 s2文件夹
-drwxr-xr-x  2 rimi  staff  68 11 14 17:19 s文件夹
-drwxr-xr-x  2 rimi  staff  68 11 14 17:12 yqqgsa
+rimideiMac-83:home rimi$ ls -d */                       查看所有文件夹
+d2文件夹/	d文件夹/	s2文件夹/	s文件夹/	yqqgsa/
 
-rimideiMac-83:home rimi$ ls -l | grep ^d d*                       匹配所有d开头的文件夹
-grep: d2文件夹: Is a directory
-grep: d文件夹: Is a directory
+
+rimideiMac-83:home rimi$ ls -d */ |grep s               用管道符匹配s
+s2文件夹/
+s文件夹/
+yqqgsa/
+
+
+rimideiMac-83:home rimi$ ls -d */ |grep ^s              用管道符匹配以s开头
+s2文件夹/
+s文件夹/
 
 
 
